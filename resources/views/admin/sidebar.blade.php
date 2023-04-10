@@ -29,16 +29,32 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDep"
+            aria-expanded="true" aria-controls="collapseDep">
             <i class="fas fa-fw fa-building"></i>
             <span>Departments</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseDep" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 {{-- <h6 class="collapse-header">Add New Department</h6> --}}
                 <a class="collapse-item" href="{{ route('admin.departments.index') }}">All Departments</a>
                 <a class="collapse-item" href="{{ route('admin.departments.create') }}">Add New <i class="fas fa-fw fa-plus "></i></a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDoc"
+            aria-expanded="true" aria-controls="collapseDoc">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Doctors</span>
+        </a>
+        <div id="collapseDoc" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                {{-- <h6 class="collapse-header">Add New Department</h6> --}}
+                <a class="collapse-item" href="{{ route('admin.doctors.index') }}">All Doctors</a>
+                <a class="collapse-item" href="{{ route('admin.doctors.create') }}">Add New <i class="fas fa-fw fa-plus "></i></a>
             </div>
         </div>
     </li>

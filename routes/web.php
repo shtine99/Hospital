@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\admin\DoctorController;
 use App\Http\Controllers\admin\DepartmentController;
 
 Route::prefix('admin')->name('admin.')->middleware('auth' , 'user_type')->group(function () {
@@ -10,6 +11,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth' , 'user_type')->group(
     Route::get('/', [AdminController::class , 'index'])->name('index');
 
     Route::resource('departments', DepartmentController::class);
+    Route::resource('doctors', DoctorController::class);
 
 });
 
